@@ -1,0 +1,24 @@
+.filters {
+  background: #333;
+  padding: 10px;
+  border: 2px solid yellow;
+  border-radius: 10px;
+  display: flex;
+
+  .label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    color: chartreuse;
+    font-weight: 600;
+
+    .inp, .sel {
+      margin-top: 10px;
+      color: chartreuse;
+      border: 1px solid yellow;
+      border-radius: 5px;
+      padding: 0 10px;
+    }
+  }
+}

@@ -1,9 +1,22 @@
 .wrap {
   padding: 20px 0;
+
+  .pagin {
+    display: flex;
+    justify-content: center;
+    ul {
+      li {
+        button {
+          color: yellow;
+        }
+      }
+    }
+  }
 }
 
 .showCardWrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 20px 0;
 }
