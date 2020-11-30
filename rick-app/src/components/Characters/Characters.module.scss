@@ -1,0 +1,9 @@
+.wrap {
+  padding: 20px 0;
+}
+
+.showCardWrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
