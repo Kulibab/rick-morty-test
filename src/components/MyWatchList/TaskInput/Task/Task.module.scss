@@ -2,36 +2,43 @@
   display: flex;
   align-items: center;
   padding: 0px;
-  background: #444;
+  background: #555;
   border: 2px solid yellow;
   margin: 20px 0;
+  position: relative;
+  height: 100%;
 
   .action {
-    background: #444;
+    background: #555;
     display: flex;
+    padding: 0;
+    height: 100%;
 
     .content {
       background: #555;
       width: 100%;
+      min-height: 100%;
     }
   }
-  .icon {
-    color: yellow;
-    padding: 16px;
-    cursor: pointer;
 
-    &.red {
-      background: #ff5249;
-    }
-
-    &.green {
-      background: green;
-      color: black;
-    }
-
-    &.yellow {
-      background: yellow;
-      color: black;
+    .icon {
+      color: yellow;
+      padding: 16px;
+      cursor: pointer;
+  
+      &.red {
+        background: #ff5249;
+      }
+  
+      &.green {
+        background: green;
+        color: black;
+      }
+  
+      &.yellow {
+        background: yellow;
+        color: black;
+      }
     }
   }
 
@@ -39,4 +46,3 @@
     color: yellow;
     font-weight: 600;
   }
-}

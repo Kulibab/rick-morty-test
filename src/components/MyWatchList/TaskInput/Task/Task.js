@@ -7,7 +7,7 @@ const Task = ({ task, deleteTask, completeTask }) => {
 
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} style={{background: '#555'}}>
       <CardActionArea className={classes.action} onClick={() => (completeTask(task.id))}>
       {task.done 
       ? <CheckBox className={classes.icon + ' ' + classes.green}/>
@@ -18,7 +18,7 @@ const Task = ({ task, deleteTask, completeTask }) => {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <DeleteOutline className={classes.icon + ' ' + classes.red} onClick={() => deleteTask(task.id)}/>
+        <DeleteOutline className={classes.icon + ' ' + classes.red} onClick={() => deleteTask(task.id)}/>
     </Card>
   )
 }

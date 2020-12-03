@@ -40,8 +40,7 @@ export default function TaskInput({addTask}) {
     <Paper className={classes.root} >
       <InputBase
         className={classes.input}
-        placeholder="Search Google Maps"
-        inputProps={{ 'aria-label': 'search google maps' }}
+        placeholder="What are we going to watch?"
         onChange={(e) => setTask(e.target.value)}
         value={task}
       />
