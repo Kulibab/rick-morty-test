@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 
 import classes from './ShowCard.module.scss'
 
-const ListItem = ({ name, id, air_date, episode, type, dimension }) => {
+const ListItem = ({ name, air_date, episode, type, dimension }) => {
 
   return (
     <Card className={classes.root}>
@@ -61,9 +61,8 @@ const ListItem = ({ name, id, air_date, episode, type, dimension }) => {
 };
 
 ListItem.propTypes = {
-  image: PropTypes.string,
+  image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  id: PropTypes.number,
 };
 
 export default ListItem;

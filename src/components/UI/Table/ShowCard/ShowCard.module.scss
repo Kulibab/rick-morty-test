@@ -4,14 +4,9 @@
   width: 19%;
   margin-bottom: 30px;
   margin-top: 10px;
-  margin-right: 1.25%;
   border: 2px solid chartreuse;
   box-sizing: border-box;
   color: yellow;
-
-  &:nth-child(5n) {
-    margin-right: 0;
-  }
 
   .root_block {
     position: relative;
@@ -44,6 +39,16 @@
   }
 }
 
+@media (min-width: 769px) {
+  .root {
+    margin-right: 1.25%;
+    
+    &:nth-child(5n) {
+      margin-right: 0;
+    }  
+  }
+}
+
 @media (max-width: 768px) {
   .root {
     width: 24%;
@@ -53,7 +58,6 @@
     &:nth-child(4n) {
       margin-right: 0;
     }
-  
   }
 }
 
@@ -62,9 +66,8 @@
     width: 49%;
     margin-right: 2%;
 
-    &:nth-child(2n) {
+    &:nth-child(even) {
       margin-right: 0;
     }
-  
   }
 }
