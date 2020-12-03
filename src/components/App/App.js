@@ -1,5 +1,5 @@
 import c from './App.module.scss';
-import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
+import { HashRouter, Redirect, Route, Switch } from 'react-router-dom';
 import Header from '../Header/Header';
 import Characters from '../Characters/Characters';
 import classes from './App.module.scss';
@@ -11,7 +11,7 @@ import MyWatchList from '../MyWatchList/MyWatchList';
 const App = () => {
   return (
     <div className={classes.appWrap}>
-    <Router basename={process.env.PUBLIC_URL}>
+    <HashRouter>
     <div className={c.container}>
       <Header />
       <Switch>
@@ -22,7 +22,7 @@ const App = () => {
       <Redirect from='/' to={routes.CHARACTERS}/>
       </Switch>
     </div>
-    </Router>
+    </HashRouter>
     </div>
   );
 }
