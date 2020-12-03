@@ -68,8 +68,7 @@ const ListItem = ({ name, image, species, id, gender, status }) => {
 };
 
 ListItem.propTypes = {
-  image: PropTypes.string,
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   id: PropTypes.number,
 };
 

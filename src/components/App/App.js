@@ -11,7 +11,7 @@ import MyWatchList from '../MyWatchList/MyWatchList';
 const App = () => {
   return (
     <div className={classes.appWrap}>
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
     <div className={c.container}>
       <Header />
       <Switch>
