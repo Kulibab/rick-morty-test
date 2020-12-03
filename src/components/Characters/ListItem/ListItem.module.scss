@@ -14,7 +14,8 @@
 
     .media {
       width: 20%;
-      height: 150px;
+      height: 100%;
+      min-height: 150px;
       box-sizing: border-box;
     }
 
@@ -39,6 +40,43 @@
         &:nth-child(even) {
           font-weight: 700;
           color: chartreuse;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .root {
+    .root_block {
+
+      .media {
+        width: 30%;
+      }
+      .title_block {
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        .content {
+          width: 60%;
+          box-sizing: border-box;
+          padding: 5px;
+
+          &:nth-child(even) {
+            width: 40%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .root {
+    .root_block {
+      .content {
+        .text {
+          font-size: 12px;
         }
       }
     }
