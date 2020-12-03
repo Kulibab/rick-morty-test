@@ -4,11 +4,14 @@
   border: 2px solid yellow;
   border-radius: 10px;
   display: flex;
+  margin-bottom: 15px;
+  justify-content: space-around;
 
   .label {
     display: flex;
     flex-direction: column;
     width: 100%;
+    max-width: 300px;
     padding: 10px;
     color: chartreuse;
     font-weight: 600;

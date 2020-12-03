@@ -1,0 +1,36 @@
+.wrap {
+  background: rgba(0,0,0, 0.3);
+
+  .root {
+    background: #444;
+    border: 2px solid yellow;
+    border-radius: 5px;
+    width: 400px;
+    box-sizing: border-box;
+
+    .media {
+      height: 300px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid chartreuse;
+    }
+
+    .content {
+      color: #eee;
+      display: flex;
+      padding: 15px 15px 0px;
+
+      .text {
+        font-weight: 500;
+        color: yellow;
+
+        &:nth-child(even) {
+          font-weight: 700;
+          padding-left: 20px;
+          color: chartreuse;
+        }
+      }
+    }
+  }
+}

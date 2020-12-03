@@ -1,0 +1,11 @@
+.pagin {
+  display: flex;
+  justify-content: center;
+  ul {
+    li {
+      button {
+        color: yellow;
+      }
+    }
+  }
+}

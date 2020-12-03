@@ -1,0 +1,46 @@
+.root {
+  position: relative;
+  background: #222;
+  width: 100%;
+  margin-bottom: 30px;
+  border: 2px solid chartreuse;
+  box-sizing: border-box;
+  color: yellow;
+
+  .root_block {
+    position: relative;
+    display: flex;
+    height: 100%;
+
+    .media {
+      width: 20%;
+      height: 150px;
+      box-sizing: border-box;
+    }
+
+    .title_block {
+      height: 100%;
+      width: 80%;
+      background: #222;
+      color: yellow;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      box-sizing: border-box;
+
+      .content {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .text {
+        font-weight: 400;
+
+        &:nth-child(even) {
+          font-weight: 700;
+          color: chartreuse;
+        }
+      }
+    }
+  }
+}

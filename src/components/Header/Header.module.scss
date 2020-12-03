@@ -1,16 +1,26 @@
 .nav {
-  background: #222;
-  border: 3px solid chartreuse;
-  padding: 20px;
-  border-radius: 10px;
-  font-size: 20px;
-  font-weight: 600;
+  
+  width: 100%;
+  max-width: 1140px;
+  position: fixed;
+  z-index: 10;
+  top: 0px;
+  padding: 15px 0;
+  background: #444;
+
 
   .container {
     max-width: 1140px;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
+    background: #222;
+  border: 3px solid chartreuse;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  box-sizing: border-box;
   }
 }
 

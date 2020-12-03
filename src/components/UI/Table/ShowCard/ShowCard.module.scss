@@ -1,0 +1,45 @@
+.root {
+  position: relative;
+  background: #222;
+  width: 19%;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-right: 1.25%;
+  border: 2px solid chartreuse;
+  box-sizing: border-box;
+  color: yellow;
+
+  &:nth-child(5n) {
+    margin-right: 0;
+  }
+
+  .root_block {
+    position: relative;
+    height: 100%;
+
+    .title_block {
+      height: 100%;
+      width: 100%;
+      background: #222;
+      color: yellow;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      padding: 0;
+
+      .content {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .text {
+        font-weight: 400;
+
+        &:nth-child(even) {
+          font-weight: 700;
+          color: chartreuse;
+        }
+      }
+    }
+  }
+}

@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { charactersAPI } from '../../apiRuquests/apiRequests';
 import { isOdd } from '../../helpers/helpers';
-import Filters from '../common/Filters/Filters';
-import ShowCard from '../common/ShowCard/ShowCard';
+import Filters from '../UI/Filters/Filters';
+import ListItem from './ListItem/ListItem';
 import classes from './Characters.module.scss';
-import Pagination from '@material-ui/lab/Pagination';
+import Paginator from '../UI/Paginator/Paginator';
 
 const Characters = () => {
-  const [episodes, setEpisodes] = useState([]);
+  const [characters, setCharacters] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [filters, setFilters] = useState({});
   const [lastPage, setLastPage] = useState();
@@ -16,12 +16,12 @@ const Characters = () => {
     const getData = async () => {
       try {
         let { results, info } = await charactersAPI.getCharacters(currentPage, filters);
-        let newEpisodes = isOdd(currentPage) ? results.slice(10): results.slice(0, 10);
-        setEpisodes(newEpisodes);
+        let newCharacters = isOdd(currentPage) ? results.slice(10): results.slice(0, 10);
+        setCharacters(newCharacters);
         setLastPage(Math.ceil(info.count / 10))
       } catch (e) {
         console.log(e)
-        setEpisodes([]);
+        setCharacters([]);
       }
     }
 
@@ -35,26 +35,28 @@ const Characters = () => {
       <Filters 
         setFilters={setFilters} 
         setCurrentPage={setCurrentPage}
+        bySpecies
+        byStatus
+        byGender
         />
       <div className={classes.showCardWrap}>
-        {episodes.map(({ name, image, species, id }) => (
-            <ShowCard
-              title={name}
-              imgURL={image}
+        {characters.map(({ name, image, species, id, gender, status }) => (
+            <ListItem
+              name={name}
+              image={image}
               species={species}
+              gender={gender}
               key={id}
+              status={status}
               id={id}
             />
           ))}
       </div>
-      <Pagination 
-        className={classes.pagin}
-        count={lastPage} 
-        page={currentPage} 
-        onChange={(e, val) => setCurrentPage(val)} 
-        color='primary'
-        shape="rounded"
-        />
+      <Paginator
+        lastPage={lastPage}
+        currentPage={currentPage}
+        onChange={setCurrentPage}
+      />
     </div>
   )
 }
